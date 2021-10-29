@@ -1,10 +1,31 @@
 <?php
-    setlocale(LC_ALL, "ukrainian" );
-    $day = strftime('%d');
-    $mon = strftime('%B');
-    // convert encoding with windows-125 to UTF-8
-    $mon = iconv("windows-1251", "UTF-8", $mon);
-    $year = strftime('%Y');
+
+    /*
+     * Get time in type string
+     * and convert string to ab integer from 00 to 23
+     */
+
+    $hour = (int) strftime('%H');
+    $welcome = '';
+
+    echo $hour;
+
+    if($hour >= 0 and $hour < 6 ) {
+        $welcome = 'Good night';
+
+    }elseif($hour >= 6 and $hour < 12 ) {
+        $welcome = 'Good morning';
+
+    }elseif($hour >= 12 and $hour < 18 ) {
+        $welcome = 'Good day';
+
+    }elseif ($hour >= 18 and $hour < 23) {
+        $welcome = 'Good evening';
+    }else{
+        $welcome = 'Good night';
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,17 +33,8 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-        <blockquote>
-            <?php
-                echo "Today: $day day, $mon month, $year year.";
-            ?>
-        </blockquote>
 
-        <!--footbar-->
-        <div>
-            <?php echo $year ?>
-        </div>
-
+        <?php echo $welcome ?> Guest</h1>
 
     </body>
 
