@@ -8,8 +8,6 @@
     $hour = (int) strftime('%H');
     $welcome = '';
 
-    echo $hour;
-
     if($hour >= 0 and $hour < 6 ) {
         $welcome = 'Good night';
 
@@ -30,11 +28,12 @@
 
 <!DOCTYPE html>
     <head>
+        <title>PHP Level 1</title>
         <meta charset="UTF-8"/>
     </head>
     <body>
 
-        <?php echo $welcome ?> Guest</h1>
+       <h1> <?php echo $welcome ?> Guest</h1>
 
     </body>
 
