@@ -30,6 +30,7 @@
     <body>
 
        <h1> <?php echo $welcome ?> Guest</h1>
+        <a href="phpFiles/contact.php">Contact</a>
 
     </body>
 
