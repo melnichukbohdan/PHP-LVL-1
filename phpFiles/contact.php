@@ -5,11 +5,11 @@ $size = (int) $postMaxSize;
 $letter = strlen($postMaxSize);
 $letter = (string) substr("$postMaxSize", -1);
 
-switch (strtoupper($letter)) {
-    case 'K' : $size = $size * 1024; break;
-    case 'M' : $size = $size * 1024 ** 2; break;
-    case 'G' : $size = $size * 1024 ** 3; break;
-}
+switch (strtoupper($letter)):
+    case 'G' : $size = $size * 1024;
+    case 'M' : $size = $size * 1024;
+    case 'K' : $size = $size * 1024;
+endswitch;
 
 ?>
 
@@ -25,4 +25,3 @@ switch (strtoupper($letter)) {
         <?php echo 'Maximum data size ', $size, ' bait' ?>
 
     </body>
-a
