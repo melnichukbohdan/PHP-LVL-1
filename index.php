@@ -18,6 +18,16 @@
         $welcome = 'Good evening';
     }
 
+    //Sitebar, array initialization
+
+    $leftMenu = [
+        ['link' => 'Home',                  'href' => 'index.php'],
+        ['link' => 'About us',              'href' => 'phpFiles/about.php'],
+        ['link' => 'Contact',               'href' => 'phpFiles/contact.php'],
+        ['link' => 'Multiplication table',  'href' => 'phpFiles/multiplicationTable.php'],
+        ['link' => 'Calculator',            'href' => 'phpFiles/calculator.php']
+
+    ];
 
 
 ?>
@@ -32,36 +42,14 @@
         <h1> <?php echo $welcome ?> Guest</h1>
 
         <!-- Main menu-->
+        <!-- left sitebar-->
         <?php
-            $leftMenu = [
-                ['link' => 'Home',                  'href' => 'index.php'],
-                ['link' => 'About us',              'href' => 'phpFiles/about.php'],
-                ['link' => 'Contact',               'href' => 'phpFiles/contact.php'],
-                ['link' => 'Multiplication table',  'href' => 'phpFiles/multiplicationTable.php'],
-                ['link' => 'Calculator',            'href' => 'phpFiles/calculator.php']
-
-            ];
+            echo "<ul>";
+                // render link menu left sitebar
+                foreach ($leftMenu as $li) {
+                    echo "<a href='$li[href]'>$li[link]</a><br>";
+                };
+            echo "</ul>";
         ?>
-
-        <ul>
-            <li>
-                <a href='<?php echo $leftMenu [0]['href']?>'><?php  echo $leftMenu [0]['link'] ?></a>
-            </li>
-            <li>
-                <a href="<?php echo $leftMenu [1]['href']?>"><?php  echo $leftMenu [1]['link'] ?></a>
-            </li>
-            <li>
-                <a href="<?php echo$leftMenu [2]['href']?>"><?php  echo $leftMenu [2]['link'] ?></a>
-            </li>
-            <li>
-                <a href="<?php echo $leftMenu [3]['href']?>"><?php  echo $leftMenu [3]['link'] ?></a>
-            </li>
-            <li>
-                <a href="<?php echo $leftMenu [4]['href']?>"><?php  echo $leftMenu [4]['link'] ?></a>
-            </li>
-        </ul>
-
-
-        <a href="phpFiles/contact.php">Contact</a>
 
     </body>
