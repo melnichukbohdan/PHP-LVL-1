@@ -38,18 +38,20 @@
         <meta charset="UTF-8"/>
     </head>
     <body>
-
+        <!-- greeting the guest according to the time of day-->
         <h1> <?php echo $welcome ?> Guest</h1>
 
         <!-- Main menu-->
         <!-- left sitebar-->
-        <?php
-            echo "<ul>";
-                // render link menu left sitebar
-                foreach ($leftMenu as $li) {
-                    echo "<a href='$li[href]'>$li[link]</a><br>";
-                };
-            echo "</ul>";
-        ?>
-
+        <div>
+            <h2>Navigation menu</h2>
+            <?php
+                echo "<ul>";
+                    // render link menu left sitebar
+                    foreach ($leftMenu as $li) {
+                        echo "<a href='$li[href]'>$li[link]</a><br>";
+                    };
+                echo "</ul>";
+            ?>
+        </div>
     </body>
