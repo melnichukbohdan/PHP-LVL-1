@@ -1,10 +1,22 @@
 <?php
 
-    $cols = 10;
-    $rows = 10;
-    $color = 'aqua'
-//    $i = 1; // tr in table
-//    $j = 1; // th in table
+function drawTable($cols, $rows, $color) {
+    echo " <table >";
+    for ($tr = 1; $tr <= $rows; $tr++) {
+        echo "<tr>";
+        for ($td = 1; $td <= $cols; $td++) {
+            if ($td == 1 or $tr == 1) {
+                echo "<th style='background-color:$color'>" . $tr * $td . "</th> ";
+            } else {
+                echo "<td>" . $tr * $td . "</td> ";
+            }
+        }
+        echo "</tr>";
+
+    }
+    echo "</table>";
+
+}
 
 ?>
 
@@ -22,19 +34,6 @@
 
     <!-- render multiplication table -->
 <?php
-echo " <table >";
-for ($tr = 1; $tr <= $rows; $tr++) {
-    echo "<tr>";
-        for ($td = 1; $td <= $cols; $td++) {
-            if ($td == 1 or $tr == 1) {
-                echo "<th style='background-color:$color'>" . $tr * $td . "</th> ";
-            } else {
-                echo "<td>" . $tr * $td . "</td> ";
-            }
-        }
-    echo "</tr>";
-
-}
-echo "</table>"
+    drawTable(5,6,'aqua');
 ?>
     </body>
