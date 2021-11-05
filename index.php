@@ -20,16 +20,32 @@
 
     //Sitebar, array initialization
 
-    $leftMenu = [
+    $menu = [
         ['link' => 'Home',                  'href' => 'index.php'],
-        ['link' => 'About us',              'href' => 'phpFiles/about.php'],
+        ['link' => 'About us',                 'href' => 'phpFiles/about.php'],
         ['link' => 'Contact',               'href' => 'phpFiles/contact.php'],
         ['link' => 'Multiplication table',  'href' => 'phpFiles/multiplicationTable.php'],
         ['link' => 'Calculator',            'href' => 'phpFiles/calculator.php']
 
     ];
+    function drawMenu($menu, $vertical = TRUE) {
+        if ($vertical) {
+            echo "<ul>";
+            // render link menu left sitebar as a column
+            foreach ($menu as $li) {
+                echo "<a href='$li[href]'>$li[link] </a><br>";
+            };
+            echo "</ul>";
+        }else{
+            echo "<ul>";
+            // render link menu left sitebar as a row
+            foreach ($menu as $li) {
+                echo "<a href='$li[href]'>$li[link] </a>";
+            };
+            echo "</ul>";
+        }
 
-
+    }
 ?>
 
 <!DOCTYPE html>
@@ -43,15 +59,10 @@
 
         <!-- Main menu-->
         <!-- left sitebar-->
-        <div>
+        <aside>
             <h2>Navigation menu</h2>
             <?php
-                echo "<ul>";
-                    // render link menu left sitebar
-                    foreach ($leftMenu as $li) {
-                        echo "<a href='$li[href]'>$li[link]</a><br>";
-                    };
-                echo "</ul>";
+            drawMenu ($menu);
             ?>
-        </div>
+        </aside>
     </body>
