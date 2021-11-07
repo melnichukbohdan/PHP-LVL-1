@@ -1,0 +1,25 @@
+
+.linkButton {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-style: solid;
+    border-color: ghostwhite;
+    background-color: ghostwhite;
+    text-align: left;
+
+}
+
+.titleLeftSitebar {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

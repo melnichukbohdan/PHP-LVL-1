@@ -1,0 +1,27 @@
+/*header stylesheet*/
+
+.logo {
+    height: 100px;
+    width: 140px;
+    margin: 7px;
+
+}
+
+.mirroredLogo {
+    height: 100px;
+    width: 140px;
+    margin: 7px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.heaferTitle {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+
+
+}

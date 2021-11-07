@@ -1,0 +1,35 @@
+
+
+#header {
+    background-color: ghostwhite;
+    margin: 7px;
+}
+
+#leftSitebar {
+    width: 100%;
+    border: 10px 20px;
+    max-width: 180px;
+    padding: 10px 15px;
+    margin: 10px;
+    float: left;
+}
+
+#content {
+    display: inline-block;
+    margin: 10px 20px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    height: 100px;
+    width: 1000px;
+
+
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background-color: ghostwhite;
+}

@@ -15,7 +15,6 @@ function drawTable($cols, $rows, $color) {
 
     }
     echo "</table>";
-
 }
 
 ?>
