@@ -25,7 +25,7 @@ $leftMenu = [
     ['link' => 'Home',                  'href' => 'index.php'],
     ['link' => 'About us',              'href' => 'phpFiles/about.php'],
     ['link' => 'Contact',               'href' => 'phpFiles/contact.php'],
-    ['link' => 'Multiplication table',  'href' => 'phpFiles/multiplicationTable.php'],
+    ['link' => 'Table',                 'href' => 'phpFiles/multiplicationTable.php'],
     ['link' => 'Calculator',            'href' => 'phpFiles/calculator.php']
 
 ];
