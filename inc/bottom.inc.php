@@ -1,6 +1,6 @@
 <div id="footer">
     <?php
-    drawMenu ($leftMenu,false);
+        drawMenu ($leftMenu,false);
     ?>
     <p>
         2021

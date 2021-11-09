@@ -17,3 +17,31 @@ if($hour >= 6 and $hour < 12 ) {
 }elseif ($hour >= 18 and $hour < 23) {
     $welcome = 'Good evening';
 }
+
+//Sitebar, array initialization
+$leftMenu = [
+    ['link' => 'Home',                  'href' => 'index.php'],
+    ['link' => 'About us',              'href' => 'index.php?id=about'],
+    ['link' => 'Contact',               'href' => 'index.php?id=contact'],
+    ['link' => 'Table',                 'href' => 'index.php?id=table'],
+    ['link' => 'Calculator',            'href' => 'index.php?id=calc']
+
+];
+function drawMenu($menu, $vertical = TRUE) {
+    if ($vertical) {
+        echo "<ul>";
+        // render link menu left sitebar as a column
+        foreach ($menu as $li) {
+            echo "<a class='linkButton' href='$li[href]'>$li[link] </a><br>";
+        };
+        echo "</ul>";
+    }else{
+        echo "<ul>";
+        // render link menu left sitebar as a row
+        foreach ($menu as $li) {
+            echo "<button href='$li[href]'>$li[link] </button>";
+        };
+        echo "</ul>";
+    }
+
+}

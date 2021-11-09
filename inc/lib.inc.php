@@ -18,32 +18,3 @@ function drawTable($cols, $rows, $color) {
     }
     echo "</table>";
 }
-
-
-//Sitebar, array initialization
-$leftMenu = [
-    ['link' => 'Home',                  'href' => 'index.php'],
-    ['link' => 'About us',              'href' => 'phpFiles/about.php'],
-    ['link' => 'Contact',               'href' => 'phpFiles/contact.php'],
-    ['link' => 'Table',                 'href' => 'phpFiles/multiplicationTable.php'],
-    ['link' => 'Calculator',            'href' => 'phpFiles/calculator.php']
-
-];
-function drawMenu($menu, $vertical = TRUE) {
-    if ($vertical) {
-        echo "<ul>";
-        // render link menu left sitebar as a column
-        foreach ($menu as $li) {
-            echo "<a class='linkButton' href='$li[href]'>$li[link] </a><br>";
-        };
-        echo "</ul>";
-    }else{
-        echo "<ul>";
-        // render link menu left sitebar as a row
-        foreach ($menu as $li) {
-            echo "<button href='$li[href]'>$li[link] </button>";
-        };
-        echo "</ul>";
-    }
-
-}

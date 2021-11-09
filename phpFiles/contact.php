@@ -1,27 +1,8 @@
-<?php
+<div id="content">
 
-$postMaxSize = ini_get('post_max_size');
-$size = (int) $postMaxSize;
-$letter = strlen($postMaxSize);
-$letter = (string) substr("$postMaxSize", -1);
+    <!--Main content-->
 
-switch (strtoupper($letter)):
-    case 'G' : $size = $size * 1024;
-    case 'M' : $size = $size * 1024;
-    case 'K' : $size = $size * 1024;
-endswitch;
+    <span>email - test@i.ua</span><br>
+    <span>tel. - +380971234567</span>
 
-?>
-
-<!DOCTYPE HTML>
-    <head>
-
-    </head>
-    <body>
-
-        <form>
-
-        </form>
-        <?php echo 'Maximum data size ', $size, ' bait' ?>
-
-    </body>
+</div>
