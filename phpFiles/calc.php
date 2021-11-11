@@ -1,6 +1,6 @@
 <?php
 
-$output = ''
+$output = '';
 
     //reduction of data to integer type
 function checkInt ($data) {
@@ -18,7 +18,6 @@ $message = '';
 if (empty($op)) {
     $message = 'enter an operator';
 }
-
 
     //function that performs mathematical calculations
 function result ($num1, $op, $num2) {
@@ -45,7 +44,6 @@ if(!empty($_POST)) {
     $output = result($num1, $op, $num2);
 }
 
-
 ?>
     <!-- calculator -->
 <div id="content">
@@ -56,8 +54,8 @@ if(!empty($_POST)) {
                value="<?php echo isset($_POST['num1']) ? $_POST['num1'] : ''  ?>">
                <br><br>
 
-        <label for="op">Operator </label><?php if (!empty($_POST['op'])) { echo $message; } ?><br>
-        <input type="text" id="op" name="op"
+        <label for="op">Operator</label><br>
+        <input type="text" id="op" name="op" placeholder="<?php if (empty($_POST['op'])) { echo $message; } ?>"
                value="<?php echo isset($_POST['op']) ? $_POST['op'] : ''; ?>">
                <br><br>
 
@@ -69,14 +67,13 @@ if(!empty($_POST)) {
     </form>
     <br>
 
-
-
     <?php
+
         //blocks the output of the message 'enter an operator' before pressing the calculate button
-        if(!empty($_POST['op'])) {
-            if (!empty($message)) {
+        if(empty($op) and !isset($_POST)) {
+           // if (!empty($message)) {
                 echo $message;
-            }
+          //  }
         }
 
         //blocks the output of the message 'operation result' before pressing the calculate button
@@ -87,7 +84,8 @@ if(!empty($_POST)) {
         //render calculate operation
         if (!empty($output)){
             echo $render . ' ' . $output;
-}
+
+        }
 
     ?>
 </div>

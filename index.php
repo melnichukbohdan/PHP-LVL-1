@@ -7,8 +7,8 @@ require_once "inc/data.inc.php";
 
 $title = 'Site our school';
 $header = "$welcome, Guest!";
-//add default key 'id' in super global array _GET
 
+//add default key 'id' in super global array _GET
 $id= '';
 if (empty($_GET['id'])) {
     $_GET['id'] = $id;
@@ -40,7 +40,6 @@ switch ($id) {
         break;
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +55,6 @@ switch ($id) {
     </head>
     <body>
 
-
-
         <?php
 
         //  Header
@@ -70,8 +67,7 @@ switch ($id) {
 
         echo "<h1> $header </h1>";
 
-
-        switch ($id) {
+                switch ($id) {
             case 'about' :
                 include 'phpFiles/about.php';
                 break;
