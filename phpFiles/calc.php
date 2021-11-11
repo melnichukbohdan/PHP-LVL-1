@@ -1,6 +1,6 @@
 <?php
 
-$output = ''
+$output = '';
 
     //reduction of data to integer type
 function checkInt ($data) {
