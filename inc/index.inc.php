@@ -1,6 +1,4 @@
 <div id="content">
-    <!-- greeting the guest according to the time of day-->
-    <h1> <?php echo $welcome ?> Guest</h1>
     <span>
                 The PHP team is pleased to announce the release of PHP 8.1.0, RC 5. This is the fifth release candidate,
                 continuing the PHP 8.1 release cycle, the rough outline of which is specified in the PHP Wiki.
@@ -12,5 +10,5 @@ For more information on the new features and other changes, you can read the NEW
 The next release will be the sixth and last release candidate (RC 6), planned for 11 November 2021.
 The signatures for the release can be found in the manifest or on the QA site.
 Thank you for helping us make PHP better.
-            </span>
+    </span>
 </div>

@@ -15,12 +15,12 @@
 }
 
 #content {
-    display: inline-block;
+    /*display: inline-block;*/
     margin: 10px 20px;
     position: relative;
     font-family: 'Montserrat', sans-serif;
     height: 100px;
-    width: 1000px;
+    /*width: 1000px;*/
 
 
 }

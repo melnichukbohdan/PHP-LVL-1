@@ -7,11 +7,24 @@ require_once "inc/data.inc.php";
 
 $title = 'Site our school';
 $header = "$welcome, Guest!";
+//add default key 'id' in super global array _GET
+
+$id= '';
+if (empty($_GET['id'])) {
+    $_GET['id'] = $id;
+}
+
+// check key 'id' in super global array _GET
 $id = strtolower(strip_tags(trim($_GET['id'])));
+
+if (empty($_GET['id'])) {
+    $_GET['id'] = '';
+}
+
 switch ($id) {
     case 'about' :
         $title = 'about site';
-        $header = 'about our sitr';
+        $header = 'about our site';
         break;
     case 'contact':
         $title = 'Contact';
@@ -43,7 +56,7 @@ switch ($id) {
     </head>
     <body>
 
-        <h1> <?php echo $header ?> Guest</h1>
+
 
         <?php
 
@@ -54,7 +67,9 @@ switch ($id) {
         require_once "inc/menu.inc.php";
 
         // Main content
-//        require_once "inc/index.inc.php";
+
+        echo "<h1> $header </h1>";
+
 
         switch ($id) {
             case 'about' :
@@ -70,7 +85,7 @@ switch ($id) {
                 include 'phpFiles/calc.php';
                 break;
             default:
-                include 'inc/index.inc.php'; // error in line 73
+                include 'inc/index.inc.php';
         }
 
         //  Footer
