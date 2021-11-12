@@ -1,5 +1,8 @@
 <?php
 
+
+
+include_once "inc/cookie.inc.php";
 require_once "inc/lib.inc.php";
 require_once "inc/data.inc.php";
 
@@ -66,6 +69,7 @@ switch ($id) {
         // Main content
 
         echo "<h1> $header </h1>";
+        echo $renderCounterVisit;
 
                 switch ($id) {
             case 'about' :
