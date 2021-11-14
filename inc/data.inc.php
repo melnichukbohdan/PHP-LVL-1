@@ -24,7 +24,8 @@ $leftMenu = [
     ['link' => 'About us',              'href' => 'index.php?id=about'],
     ['link' => 'Contact',               'href' => 'index.php?id=contact'],
     ['link' => 'Table',                 'href' => 'index.php?id=table'],
-    ['link' => 'Calculator',            'href' => 'index.php?id=calc']
+    ['link' => 'Calculator',            'href' => 'index.php?id=calc'],
+    ['link' => 'Test',                  'href' => 'index.php?id=test']
 
 ];
 function drawMenu($menu, $vertical = TRUE) {

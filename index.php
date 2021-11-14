@@ -84,6 +84,9 @@ switch ($id) {
             case 'calc':
                 include 'phpFiles/calc.php';
                 break;
+            case 'test':
+                include 'test/test.inc.php';
+                break;
             default:
                 include 'inc/index.inc.php';
         }
