@@ -9,7 +9,7 @@ require_once "inc/data.inc.php";
 //Initialize page titles
 
 $title = 'Site our school';
-$header = "$welcome, Guest!";
+$header = "$welcome, Guest!"; // this variable will be received from the file  'data.inc.php'
 
 //add default key 'id' in super global array _GET
 $id= '';
@@ -69,7 +69,7 @@ switch ($id) {
         // Main content
 
         echo "<h1> $header </h1>";
-        echo $renderCounterVisit;
+        echo $renderCounterVisit; // this variable will be retrieved from the file 'cookie.inc.php'
 
                 switch ($id) {
             case 'about' :

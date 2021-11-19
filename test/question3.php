@@ -3,7 +3,7 @@
 session_start();
 
 //check answer from questions 2
-if (isset($_POST) and isset($_POST['q2c']) == 'on') {
+if (isset($_POST) and isset($_POST['q2c']) == 'on' and !isset($_POST['q2a']) and !isset($_POST['q2b'])) {
     $_SESSION['test']['q2'] = '10';
 }else{
     $_SESSION['test']['q2'] = '0';

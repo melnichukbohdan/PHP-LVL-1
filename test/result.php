@@ -3,8 +3,7 @@
 session_start();
 
 //check answer from questions 1
-if (isset($_POST) and isset($_POST['q3c']) == 'on') {
-
+if (isset($_POST) and isset($_POST['q3a']) == 'on' and !isset($_POST['q3b']) and !isset($_POST['q3c'])) {
     $_SESSION['test']['q3'] = '10';
 }else{
     $_SESSION['test']['q3'] = '0';
@@ -14,8 +13,8 @@ if (isset($_POST) and isset($_POST['q3c']) == 'on') {
 $results = $_SESSION['test'];
 function result ($results) {
     $i = 1;
-    foreach ($results as $key => $value) {
-        echo 'question ' . $i . ' = ' . $value . ' points' . "<br>";
+    foreach ($results as $value) {
+        echo 'question' . ' ' . $i . ' ' . '=' . ' ' . $value . ' ' . 'points' . "<br>";
         $i++;
         }
 }
@@ -37,3 +36,5 @@ function result ($results) {
     </form>
 
 </div>
+
+//TODO unset session
