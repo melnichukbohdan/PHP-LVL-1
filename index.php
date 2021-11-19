@@ -41,6 +41,14 @@ switch ($id) {
         $title = 'Online calculator';
         $header = 'Calculator';
         break;
+    case 'test':
+        $title = 'Online test';
+        $header = 'Test';
+        break;
+    case 'guest':
+        $title = 'Guest book';
+        $header = 'Our guest book';
+        break;
 }
 
 ?>
@@ -86,6 +94,9 @@ switch ($id) {
                 break;
             case 'test':
                 include 'test/test.inc.php';
+                break;
+            case 'guest':
+                include 'phpFiles/guestBook.php';
                 break;
             default:
                 include 'inc/index.inc.php';
