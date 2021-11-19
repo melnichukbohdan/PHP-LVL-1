@@ -7,8 +7,11 @@ $counter = 1;
 
 //set cookies if cookies not isset
 if (!isset($_COOKIE['visiting'])) {
-    setcookie("visiting", "$counter", time() + 3600 * 12);
-    setcookie("lastVisit", "$date", time() + 3600 * 12);
+    setcookie("visiting", "$counter", time() + 3600 * 432);
+    setcookie("lastVisit", "$date", time() + 3600 * 432);
+    $_COOKIE['visiting'] = '0';
+    $_COOKIE['lastVisit'] = '0';
+
 }
 
 //set the time last site visit
@@ -17,7 +20,7 @@ if (isset($_COOKIE['lastVisit']))
     $lastVisit = date('d-m-y- H:i:s', $_COOKIE['lastVisit']);
 
 // this function count visits site and update cookie
-    function counterVisit ($visit,) {
+    function counterVisit ($visit) {
 
         $visit = $visit + 1;
         setcookie("visiting", "$visit", time() + 3600 * 12);
