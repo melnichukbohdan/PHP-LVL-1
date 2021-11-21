@@ -9,16 +9,8 @@ $select = mysqli_query($dbconnect, $querySelect);
 
 if ($select === false) {
     echo 'error';
-
 }
 
-//if (!empty($_POST)) {
-    if (empty($_POST['name']) or empty($_POST['email']) or empty($_POST['message'])) {
-        echo 'fill in all fields';
-   //     sleep(2);
-      //  header('Location: /../index.php?id=guest');
-    }
-//}
 // insert data from form guest book in database
 if (!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['message'])) {
     $name = str_replace("'", "\'", strip_tags(trim(($_POST['name']))));
@@ -30,21 +22,19 @@ if (!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['messag
     if ($insert === false) {
         echo 'error';
     }
-
+    //initialize user post ID
     $_SESSION['postId'] = mysqli_insert_id($dbconnect);
     header('Location: /../index.php?id=guest');
     echo 'post added';
 
-}
-else {
-
+} else {
     echo 'fill in all fields';
     echo '<form action="../index.php?id=guest" method="POST">';
     echo '<input type="submit" value="Back">';
     echo '</form>';
 }
 
-
+// delete data from form guest book in database
 if (isset($_POST['delete']) and isset($_SESSION['postId'])) {
     $postId = $_SESSION['postId'];
     $queryDelete = "DELETE FROM guest_book WHERE id = '$postId'";
@@ -54,9 +44,7 @@ if (isset($_POST['delete']) and isset($_SESSION['postId'])) {
 
 }
 
-
-
-//this feature displays all user posts in the guestbook
+//this function displays all user posts in the guestbook
 function renderGuestPost ($select) {
 
     foreach ($select as $value1) {

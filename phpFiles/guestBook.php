@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 require_once 'inc/guestBookFormHandler.inc.php'
 
 
@@ -23,21 +23,9 @@ require_once 'inc/guestBookFormHandler.inc.php'
     </form>
 
     <?php
-
-
-
+    //display all user posts
     echo renderGuestPost($select);
-
 
     ?>
 
-
-
 </div>
-
-
-<?php
-
-
-
-?>
