@@ -1,4 +1,7 @@
 <?php
+//session_start();
+require_once 'inc/guestBookFormHandler.inc.php'
+
 
 ?>
 
@@ -14,8 +17,27 @@
 
         <label for="message">Message</label><br>
         <input type="text" id="message" name="message"
-               style="height: 150px"><br><br>
+               style="height: 100px"><br><br>
 
-        <input type="submit" value="send!">
+        <input type="submit" value="send!"><br><br>
     </form>
+
+    <?php
+
+
+
+    echo renderGuestPost($select);
+
+
+    ?>
+
+
+
 </div>
+
+
+<?php
+
+
+
+?>
